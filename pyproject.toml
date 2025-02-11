@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "find-your-job"
+version = "0.1.0"
+description = ""
+authors = ["Abolfazl zaker <abolfazlzaker.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.1.6"
+djangorestframework = "^3.15.2"
+django-filter = "^24.3"
+djangorestframework-simplejwt = "^5.4.0"
+python-decouple = "^3.8"
+django-debug-toolbar = "^5.0.1"
+psycopg2 = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
