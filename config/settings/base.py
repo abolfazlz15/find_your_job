@@ -16,7 +16,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    # "accounts.apps.AccountsConfig",
+    "accounts.apps.AccountsConfig",
 ]
 
 INSTALLED_APPS = [
@@ -162,3 +162,6 @@ REST_FRAMEWORK = {
     "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
     "DATETIME_FORMAT": "%Y-%m-%d %H:%M",
 }
+
+MAX_UPLOAD_SIZE = 4 * 1024 * 1024  # 4MB
+AUTH_USER_MODEL = "accounts.User"
