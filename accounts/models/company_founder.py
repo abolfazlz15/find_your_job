@@ -16,7 +16,6 @@ class CompanyFounder(User):
             FileExtensionValidator(["png", "jpg", "jpeg"]),
             validate_file_size,
         ],
-        default="defaults/user/default.jpg",
     )
     city = models.CharField(
         max_length=128,

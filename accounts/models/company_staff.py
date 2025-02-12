@@ -3,12 +3,12 @@ from django.db import models
 
 class CompanyStaff(models.Model):
     user = models.OneToOneField(
-        "User",
+        to="User",
         on_delete=models.CASCADE,
         related_name="company_staff",
     )
     company = models.ForeignKey(
-        "CompanyFounder",
+        to="CompanyFounder",
         on_delete=models.CASCADE,
         related_name="staff_members",
     )
