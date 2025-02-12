@@ -1,9 +1,10 @@
-from django.db import models
-from django.core.validators import FileExtensionValidator
 from django.contrib.postgres.fields import IntegerRangeField
+from django.core.validators import FileExtensionValidator
+from django.db import models
 
 from accounts.models.base_user import User
 from common.validations import generate_filename, validate_file_size
+
 
 class CompanyFounder(User):
     company_name = models.CharField(
