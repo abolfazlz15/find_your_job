@@ -146,7 +146,6 @@ SIMPLE_JWT = {
 }
 
 REST_FRAMEWORK = {
-    "EXCEPTION_HANDLER": "utils.response.custom_exception_handler",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
     "DEFAULT_AUTHENTICATION_CLASSES": (

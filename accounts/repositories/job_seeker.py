@@ -6,13 +6,20 @@ from accounts.models.job_seeker import JobSeeker
 class JobSeekerRepository:
     @staticmethod
     def get_by_id(user_id: int) -> JobSeeker | None:
-        return JobSeeker.objects.filter(id=user_id).first()
-
+        try:
+            return JobSeeker.objects.get(id=user_id)
+        except JobSeeker.DoesNotExist:
+            return None
+        
     @staticmethod
-    def get_by_email(email: str) -> JobSeeker | None:
-        return JobSeeker.objects.filter(email=email).first()
+    def get_by_email(email: str, **filters) -> JobSeeker | None:
+        try:
+            return JobSeeker.objects.get(email=email, **filters)
+        except JobSeeker.DoesNotExist:
+            return None
 
-    @staticmethod
+
+    @staticmethod 
     def create_user(**kwargs) -> JobSeeker:
         return JobSeeker.objects.create(**kwargs)
 
